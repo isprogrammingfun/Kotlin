@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/buttonPressGray">
+<!-- 누르면 물결처럼 퍼지게 하는건 안드로이드 material 테마에서 적용된-->
+<!-- 리플이라는 기능-->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/buttonGray" />
+            <corners android:radius="100dp" />
+            <stroke
+                android:width="1dp"
+                android:color="@color/buttonPressGray" />
+        </shape>
+    </item>
+</ripple>

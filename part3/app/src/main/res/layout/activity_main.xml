@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8C9F76"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50sp"
+        android:text="The Secret Garden"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/passwordLayout"
+        app:layout_constraintEnd_toEndOf="@id/passwordLayout"
+        app:layout_constraintStart_toStartOf="@id/passwordLayout" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EFEBEB"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <NumberPicker
+            android:id="@+id/NumberPicker1"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:background="#9F9C9C"
+            android:theme="@style/AppTheme.NoActionBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/NumberPicker2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/openButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <NumberPicker
+            android:id="@+id/NumberPicker2"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:background="#9F9C9C"
+            android:theme="@style/AppTheme.NoActionBar"
+            app:layout_constraintEnd_toStartOf="@id/NumberPicker3"
+            app:layout_constraintStart_toEndOf="@id/NumberPicker1"
+            app:layout_constraintTop_toTopOf="@id/NumberPicker1" />
+
+        <NumberPicker
+            android:id="@+id/NumberPicker3"
+            android:layout_width="30dp"
+            android:layout_height="120dp"
+            android:background="#9F9C9C"
+            android:theme="@style/AppTheme.NoActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/NumberPicker2"
+            app:layout_constraintTop_toTopOf="@id/NumberPicker1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/openButton"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:background="#B1B590"
+            app:layout_constraintBottom_toBottomOf="@id/NumberPicker1"
+            app:layout_constraintEnd_toStartOf="@id/NumberPicker1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/NumberPicker1"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/changePasswordButton"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/openButton"
+            app:layout_constraintStart_toStartOf="@id/openButton"
+            app:layout_constraintTop_toBottomOf="@id/openButton"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
